@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto do Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <div class="logo">
+            <h1>Ponto do Café</h1>
+        </div>
+
+        <nav>
+            <ul class="menu-navegacao">
+                <li><a href="index.html" class="link-inicial">Inicio</a></li>
+                <li><a href="login.html" class="link-login">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="secao-principal">
+            <h2>Espaço para um café e boas conversas</h2>
+            <p>Somos um ponto de encontro para quem precisa de um bom café passado na hora.</p>
+            <a href="#">
+                Entre em Contato com a gente!
+            </a>
+        </section>
+
+        <section class="secao-catalogo">
+            <div class="titulo-catalogo">
+                <h3>Destaques da Semana</h3>
+                <p>Preparado na hora</p>
+            </div>
+
+            <div class="grade">
+                <article class="card">
+                    <img src="cafe.jpg" alt="Café Expresso">
+                    <div class="dados-item">
+                        <span class="etiqueta">
+                            Bebida
+                        </span>
+                        <h4>Café Expresso</h4>
+                        <p>Xicara de Café expresso (300ml)</p>
+                        <strong>R$ 3,00</strong>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="pao de queijo.jpg" alt="Pão de Queijo">
+                    <div class="dados-item">
+                        <span class="etiqueta">
+                            Salgado
+                        </span>
+                        <h4>Pão de Queijo</h4>
+                        <p>Porção de Pão de Queijo (6 Unidades)</p>
+                        <strong>R$ 7,50</strong>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="bolo.jpg" alt="Bolo de Cenoura">
+                    <div class="dados-item">
+                        <span class="etiqueta">
+                            Doces
+                        </span>
+                        <h4>Bolo de Cenoura com Chocolate</h4>
+                        <p>Fatia de Bolo de Cenoura com cobertura de chocolate</p>
+                        <strong>R$ 8,00</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao-info">
+            <div class="bloco">
+                <h3>Onde Estamos:</h3>
+                <p>Rua Tal, 130 - Centro, Boa Viagem</p>
+                <p><small>(Em frente a Igreja)</small></p>
+            </div>
+            <div class="bloco">
+                <h3>Horario de Funcionamento:</h3>
+                <p><strong>Segunda á Sexta:</strong>07:00 ás 17:00</p>
+                <p><strong>Sabado:</strong>07:00 ás 12:00</p>
+            </div>
+            <div class="bloco">
+                <h3>Estrutura:</h3>
+                <p>Wi-fi Liberado</p>
+            </div>
+        </section>
+
+        <section class="bloco-tabela">
+            <div class="filtro">
+                <label for="tamanho">Tamanho:</label>
+                <select id="tamanho">
+                    <option>300 Ml</option>
+                    <option>100 Ml</option>
+                </select>
+            </div>
+
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Bebida</th>
+                        <th>Caloria</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Café Expresso</td>
+                        <td>2 kcal</td>
+                        <td>R$ 3,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cappuccino</td>
+                        <td>115 kcal</td>
+                        <td>R$ 9,00</td>
+                    </tr>
+                    <tr>
+                        <td>Agua</td>
+                        <td>1 kcal</td>
+                        <td>R$ 2,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Ponto do Café</p>
+        <p>Desenvolvido por: <a href="portfolio.html" target="_blank" rel="noopener noreferrer">Fulano</a></p>
+    </footer>
+</body>
+</html>
+

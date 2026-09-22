@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <div class="logo">
+            <h1>Ponto do Café</h1>
+        </div>
+
+        <nav>
+            <ul class="menu-navegacao">
+                <li><a href="index.html" class="link-inicial">Inicio</a></li>
+                <li><a href="login.html" class="link-login">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-login">
+        <div class="cartao-login">
+            <h2>Acessar Painel Inicial</h2>
+            <p class="subtitulo-login">Digite seus dados:</p>
+            <form action="#" method="POST">
+                <div class="campo-grupo">
+                    <label for="campo-email">Digite seu Email:</label>
+                    <input
+                        type="email"
+                        id="campo-email"
+                        name="email"
+                        placeholder="Email"
+                        required>
+                </div>
+                <div class="campo-grupo">
+                    <label for="campo-senha">Digite sua Senha:</label>
+                    <input
+                        type="password"
+                        id="campo-senha"
+                        name="senha"
+                        placeholder="Senha"
+                        minlength="6"
+                        required>
+                </div>
+                <div class="campo-lembrete">
+                    <input type="checkbox" id="lembrar-login" name="lembrar">
+                    <label for="lembrar-login">Manter minha sessão logada neste aparelho</label>
+                </div>
+                <button type="submit" class="btn-submeter">Entrar</button>
+            </form>
+            <div class="rodape-card-login">
+                <a href="#">Esqueci minha senha</a>
+                <span> | </span>
+                <a href="#">Criar nova Conta</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Ponto do Café</p>
+        <p>Desenvolvido por: <a href="portfolio.html" target="_blank" rel="noopener noreferrer">Fulano</a></p>
+    </footer>
+</body>
+</html>
