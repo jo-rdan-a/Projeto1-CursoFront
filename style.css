@@ -1,78 +1,82 @@
+/* Seletor universal (*): aplica regras a absolutamente todas as tags da página */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove as margens externas padrão do navegador */
+  padding: 0; /* Remove os espaçamentos internos padrão */
+  box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo da largura total */
 }
 
+/* Estilos gerais aplicados a todo o corpo da página */
 body{
-  font-family: -apple-sytem, BlinkMacSystemFront, "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #f7f9fa;
-  color: #1a1a1a;
-  line-height: 1.6;
-  min-height: 100vh;
-  display:flex;
-  flex-direction:column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;  /* Fontes do sistema */
+  background-color: #f7f9fa; /* Cor de fundo da tela */
+  color: #1a1a1a; /* Cor padrão do texto */
+  line-height: 1.6; /*Altura e espaçamento entre linhas de texto */
+  min-height: 100vh; /* Ocupa pelo menos 100% da altura da janela visível */
+  display:flex; /* Ativa modelo flexbox */
+  flex-direction:column; /* Alinha os elementos na vertical */
 }
 
+/* . chama a class do html */
 .cabecalho-principal{
   background-color: #4f2f18;
-  border-bottom: 1px solid #848688;
-  padding: 14px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
+  border-bottom: 1px solid #848688; /* Linha de divisão inferior */
+  padding: 10px 24px; /* Espaçamento interno (cima/baixo, lados) */
+  display: flex; 
+  justify-content: space-between; /* Empurra logo para a esquerda e links para a direita */
+  align-items:center; /* Alinha verticalmente */
 }
 
 .logo h1{
-  font-size: 25px;
+  font-size: 20px; /* Tamanho do texto */
   color: #ffffff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.5px; /* Espaçamento entre as letras */
 }
 
 .menu-navegacao{
-  list-style:none;
-  display:flex;
-  gap:28px;
-  align-items:center;
+  list-style:none; /* Tira as bolinhas padrão de lista */
+  display:flex; 
+  gap:28px; /* Distância uniforme entre cada item */
+  align-items:center; 
 }
 
 .menu-navegacao a{
-  text-decoration:none;
+  text-decoration:none; /* Tira o sublinhado padrão de links */
   color:#f7f9fa;
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 500; /* Espessura média da letra */
 }
 
+/* Muda estado ao passar o mouse e estado ativo da página */
 .menu-navegacao a:hover,
 .menu-navegacao a.link-inicial{
-  color:#000000;
+  color:#ffffff;
 }
 
 .link-login{
   background-color:#000000;
   color:#4f2f18;
   padding: 6px 14px;
-  border-radius: 6px;
+  border-radius: 6px; /* Arredonda os cantos */
 }
 
 .link-login:hover{
-  background-color: #374151;
+  background-color:#84512c;
 }
 
 .conteudo{
-  max-width: 960px;
-  margin: 32px auto;
+  max-width: 960px; /* Limita a largura máxima do miolo da página */
+  margin: 32px auto; /* Margens externas */
   padding: 0 20px;
-  flex:1;
-  width: 100%;
+  flex:1; /* Faz a área esticar para empurrar o rodapé pro fim */
+  width: 100%; /* Ocupa a largura total disponível até o max-width */
 }
 
 .secao-principal{
   background-color:#ffffff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e5e7eb; /* Borda  */
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 32px; /* Espaço em relação ao bloco de baixo */
 }
 
 .secao-principal h2{
@@ -121,7 +125,7 @@ body{
 
 .grade{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Quebra cards automaticamente conforme a tela */
   gap: 20px;
 }
 
@@ -129,21 +133,21 @@ body{
   background-color:#ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  overflow:hidden;
+  overflow:hidden; /* Impede que a imagem passe por cima dos cantos arredondados */
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animação suave ao interagir */
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transform:translateY(-6px); /* Eleva o card levemente para cima */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Sombra elegante no hover */
 }
 
 .card img{
   width: 100%;
   height: 170px;
-  object-fit:cover;
+  object-fit:cover; /* Corta a imagem sem distorcer proporções */
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -156,7 +160,7 @@ body{
 
 .etiqueta{
   font-size: 11px;
-  text-transform:uppercase;
+  text-transform:uppercase; /* Caixa alta (maiúsculas) */
   font-weight: 700;
   color: #6b7280;
   margin-bottom: 6px;
@@ -174,7 +178,247 @@ body{
   margin-bottom: 6px;
   color: #111827;
 }
+
 .dados-item strong{
   font-size: 17px;
   color: #111827;
+}
+
+.secao-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  background-color:#a46436;
+  border: 1px solid #84512c;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.bloco h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.bloco p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.bloco p strong {
+  color: #412715;
+  margin-right: 6px;
+}
+
+.bloco small {
+  color: #e6e7e8;
+  font-size: 12px;
+}
+
+.bloco-tabela {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+  overflow-x: auto; /* Garante rolagem horizontal em telas pequenas */
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.filtro label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.filtro select {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1f2937;
+  outline: none; /* Tira contorno padrão do navegador */
+  cursor: pointer; /* Ícone de mãozinha ao apontar */
+  transition: border-color 0.2s ease;
+}
+
+.filtro select:focus {
+  border-color: #111827; /* Borda escurece ao clicar */
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse; /* Elimina os espaços vazios entre as bordas das células */
+  text-align: left;
+  font-size: 14px;
+}
+
+.tabela thead {
+  background-color: #d5d5d5;
+}
+
+.tabela th {
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabela td {
+  padding: 12px 16px;
+  color: #4b5563;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.rodape {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: auto;
+}
+
+.rodape p {
+  margin-bottom: 4px;
+}
+
+.rodape p:last-child {
+  margin-bottom: 0;
+}
+
+.rodape a {
+  color: #4f2f18;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.conteudo-login {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.cartao-login {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 32px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.cartao-login h2 {
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.subtitulo-login {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+.campo-grupo {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-grupo label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.campo-grupo input {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* :focus ativa quando o usuário clica para digitar no campo */
+.campo-grupo input:focus {
+  border-color: #111827;
+}
+
+.campo-lembrete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.campo-lembrete label {
+  font-size: 12px;
+  color: #4b5563;
+  cursor: pointer;   
+}
+
+.btn-submeter {
+  width: 100%;
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-submeter:hover {
+  background-color: #374151;
+}
+
+.rodape-card-login {
+  margin-top: 20px;         
+  text-align: center;      
+  font-size: 12px;        
+}
+
+.rodape-card-login a {
+  color: #4b5563;           
+  text-decoration: none;     
+  transition: color 0.2s ease; 
+}
+
+.rodape-card-login a:hover {
+  color: #111827;          
+  text-decoration: underline;
+}
+
+.rodape-card-login span {
+  color: #9ca3af;          
+  margin: 0 6px;            
+  user-select: none;        
 }

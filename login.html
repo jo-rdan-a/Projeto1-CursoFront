@@ -24,7 +24,9 @@
         <div class="cartao-login">
             <h2>Acessar Painel Inicial</h2>
             <p class="subtitulo-login">Digite seus dados:</p>
-            <form action="#" method="POST">
+            <form action="#" method="POST"> <!-- form: Agrupa campos de entrada para coletar e enviar dados
+            action="#" indica para onde os dados vão (temporário)
+            method="POST" envia as informações de forma segura no corpo da requisição (oculta da URL) -->
                 <div class="campo-grupo">
                     <label for="campo-email">Digite seu Email:</label>
                     <input
@@ -33,6 +35,12 @@
                         name="email"
                         placeholder="Email"
                         required>
+                        <!-- input: Campo interativo onde o usuário digita informações
+                        type="email" valida automaticamente se há formato de email (@ e domínio)
+                        id="campo-email" conecta o campo ao seu <label> correspondente
+                        name="email" define o nome da chave que envia esse dado ao backend
+                        placeholder="Email" texto temporário de dica que some ao digitar
+                        required torna o preenchimento deste campo obrigatório para enviar o formulário -->
                 </div>
                 <div class="campo-grupo">
                     <label for="campo-senha">Digite sua Senha:</label>
@@ -43,12 +51,15 @@
                         placeholder="Senha"
                         minlength="6"
                         required>
+                        <!-- type="password" oculta os caracteres digitados por pontinhos/estrelas
+                        minlength="6" exige uma quantidade mínima de 6 caracteres para permitir o envio -->
                 </div>
                 <div class="campo-lembrete">
-                    <input type="checkbox" id="lembrar-login" name="lembrar">
+                    <input type="checkbox" id="lembrar-login" name="lembrar"> <!-- type="checkbox" cria uma caixa de seleção que pode ser marcada ou desmarcada -->
                     <label for="lembrar-login">Manter minha sessão logada neste aparelho</label>
                 </div>
-                <button type="submit" class="btn-submeter">Entrar</button>
+                <button type="submit" class="btn-submeter">Entrar</button> <!-- button: Elemento de botão acionável
+                type="submit": define que ao clicar, o botão dispara o envio do form -->
             </form>
             <div class="rodape-card-login">
                 <a href="#">Esqueci minha senha</a>
